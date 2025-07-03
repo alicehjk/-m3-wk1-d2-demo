@@ -1,11 +1,9 @@
 var express = require('express');
 var app = express();
+var routes = require('./exp_demo3a');
 
+app.use('/routedemo', routes);
 
-
-//both exp-demo3a.js and exp-demo3b.js are in same directory
-
-
-app.listen(3000);
-
-
+app.listen(3000, function(){
+    console.log('Server running on http://localhost:3000/routedemo/home');
+});
